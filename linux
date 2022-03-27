@@ -1,0 +1,126 @@
+
+2022年 03月 19日 星期六 10:35:45 CST
+	chgrp
+	chown
+	chmod
+	umask	umask -S	umask 002	
+	文件隐藏属性	chattr
+	SUID: -rwsr-xr-x	只对二进制程序生效,执行者暂时获得拥有者的权限
+	
+	linux文件系统:
+		超级区块：记录此文件系统的整体信息，包括inode与数据区块的总量、使用量、以及文件系统的格式与相关信息等;
+		inode：记录文件的属性，一个文件占用一个inode，同时记录此文件的数据所在的区块号码;
+		数据区块：实际记录文件的内容，若文件太大，会占用多个区块。
+		目录树：当我们在linux建立一个目录时，文件系统会分配一个inode与至少一块区块给该目录。其中，inode记录该目录的相关权限与属性，和分配到的区块号码；区块里记录着该目录下的文件的inode以及与其对应的文件名。
+	df [...] [dir|file]	列出所有磁盘的使用情况，或目录和文件所在的磁盘的使用情况。
+	du [...] [dir|file]	列出当前目录或指定目录和文件下的文件的容量。
+	ln	硬链接，同inode
+	ln -s	软链接，新inode
+
+
+2022年 03月 20日 星期日 11:58:10 CST
+	lsblk [...] [device]		列出系统上所有的磁盘列表
+	blkid [device]			列出设备的UUID等参数
+	parted device_name print	列出磁盘的分区表类型与分区信息
+	gdisk device			磁盘分区
+	partprobe 	partprobe -s	更新Linux内核的分区表信息
+	mkfs.xfs 分区			磁盘格式化(make filesystem)
+	xfs_repair [...] [设备名称]	文件系统检验，当xfs系统发生错乱时才需使用该命令，修复时该文件系统不能被挂载
+	mount -a			依照配置文件 /etc/fstab 的数据将所有未挂载的磁盘都挂载上来
+	mount 设备文件名或UUID 挂载点		挂载设备
+	特殊设备挂载：
+	mount -o loop iso文件 挂载点	挂载镜像文件
+	以大文件制作loop特殊设备：建立一个大型文件；格式化，mkfs.xfs -f 文件名；挂载，mount -o loop 特殊设备名或UUID 挂载点
+	umount [...] 设备文件名或挂载点		卸载设备
+	根目录 / 一定要先于其它挂载点被挂载起来；卸载时，必须先将工作目录移到挂载点（及其子目录）之外
+	启动挂载	在配置文件 /etc/fstab 的最后加入一句，内容为：【设备/UUID】【挂载点】【文件系统】【文件系统参数】【dump】【fsck】，完了之后用 mount -a 测试是否正确有效。
+	
+	swap 分区的创建
+	1、使用物理分区创建内存交换分区
+		mkswap 设备	创建 swap 格式
+		free		观察
+		swapon 设备	启动分区
+		写入 /etc/fstab，UUID="" swap swap defaults 0 0 （不是文件系统，所以没有挂载点，第二栏位写入swap即可
+	2、使用文件创建内存交换文件
+		建立文件
+		mkswap 设备	创建 swap 格式
+		swapon 设备	启动分区
+		swapon -a	自动启动所有swap
+		swapon -s	显示swap分区信息
+		swapoff 分区	关闭swap
+		写入 /etc/fstab，文件名 swap swap defaults 0 0 （这里不能使用UUID，因为系统仅会查询区块设备，不会查询文件）
+
+
+2022年 03月 21日 星期一 11:39:20 CST
+
+	压缩命令通常只能作用于单一文件
+
+	gzip	zcat/zmore/zless/zgrep
+	bzip2	bzcat/bzmore/bzless/bzgrep
+	xz	xzcat/xzmore/xzless/xzgrep
+
+	-c		将压缩后的内容输出到屏幕
+	-d		解压缩参数
+	-k		保留原文件
+	-v		显示压缩比
+	-l		显示压缩文件的相关信息
+	-n(1-9)		压缩级别
+
+	gzip -v filename			压缩文件
+	gzip -cv filename > filename.gz		保留原文件地去压缩	
+	gzip -kv filename filename.gz		保留原文件地去压缩	
+	gzip -dv filename.gz			解压缩
+	gzip -l filename			压缩详情
+
+	---------------------------------------------------------------------
+
+	tar 
+
+	-p（小写）	保留备份数据的原本权限与属性，常用于备份重要的配置文件
+	-P（大写）	保留文件的绝对路径
+
+	tar -cv -f filename.tar filename...			打包
+	tar -t -f filename.tar					罗列出包的文件
+	tar -tv -f filename.tar					罗列出包的文件,伴有详细的权限信息
+	tar -xv -f filename.tar [-C dir]			解包
+	tar -cv --exclude=file -f filename.tar filename		舍弃某些文件或目录的备份
+
+	注：在默认条件下，cp 的原文件与目标文件的权限是不同的，目标文件的拥有者通常会是命令操作者本身
+
+
+2022年 03月 26日 星期六 11:00:20 CST
+
+	/etc/shells				记录了系统内的所有合法shell
+	/etc/passwd				最后一个字段记录了用户登录系统取得的shell
+	~/.bash_history				记录了前一次登录以前所执行过的命令，而此次登录所执行的命令被缓存在内存中，成功注销系统后，该部分命令才会自动记录到.bash_history中
+	
+	unset var				取消变量
+	env					查看环境变量
+	export var				将自定义变量转化成环境变量
+	
+	环境变量与自定义变量的差异在于：该变量是否会被子进程所继续引用
+	
+	alias					罗列出所有的命令别名
+	alias vi='vim'				设置别名
+	unalias vi				取消别名
+
+	标准输入		0
+	标准输出		1	1>
+	标准错误输出		2	2>
+
+	/dev/null		垃圾桶黑洞设备
+
+	groups			显示当前用户加入的所有的group
+	有效用户组：groups 命令输出的第一个group即为有效用户组
+	newgrp groupName	在新的一个shell中改变有效用户组，exit 后回到原来的shell时，一切未变
+
+
+2022年 03月 27日 星期日 16:18:06 CST
+
+	useradd useName					添加用户
+	userdel	-r useName				删除用户（连带着家目录一同删除）
+	groupadd groupName				添加用户组
+	groupdel groupName				删除用户组
+	
+	ACL
+	
