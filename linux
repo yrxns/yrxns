@@ -137,3 +137,12 @@
 		
 		/etc/at.allow		/etc/at.deny
 		/etc/at.allow中存在的用户才能使用at，若/etc/at.allow不存在，则查看/etc/at.deny，不再该文件中的用户才可使用at，若两个文件都不存在，那么就只有root可以使用at。
+
+
+	command &		将命令丢到后台中执行
+	[ctrl]-z		将目前的任务丢到后台中暂停
+	jobs			查看当前后台的任务状态
+	fg			将最新的一个后台任务转到前台
+	fg jobnumber		将后台任务转到前台来
+	bg %jobnumber		让后台任务的状态由暂停变为运行
+	kill %jobnumber		杀死一个任务
