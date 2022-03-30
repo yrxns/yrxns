@@ -146,3 +146,8 @@
 	fg jobnumber		将后台任务转到前台来
 	bg %jobnumber		让后台任务的状态由暂停变为运行
 	kill %jobnumber		杀死一个任务
+
+	进程
+	ps -l			仅查看自己的bash相关进程
+	ps aux			查看系统运行的所有进程
+	top			动态查看进程的变化
