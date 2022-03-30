@@ -128,3 +128,12 @@
 2022年 03月 30日 星期三 10:19:07 CST
 
 	LVM
+
+	计划任务
+	at		单一执行的任务
+		systemctl restart atd
+		systemctl enable atd
+		systemctl status atd
+		
+		/etc/at.allow		/etc/at.deny
+		/etc/at.allow中存在的用户才能使用at，若/etc/at.allow不存在，则查看/etc/at.deny，不再该文件中的用户才可使用at，若两个文件都不存在，那么就只有root可以使用at。
