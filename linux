@@ -78,6 +78,9 @@
 
 	-p（小写）	保留备份数据的原本权限与属性，常用于备份重要的配置文件
 	-P（大写）	保留文件的绝对路径
+	-z		gzip 的压缩与解压缩
+	-j		bzip2 的压缩与解压缩
+	-J		xz 的压缩与解压缩
 
 	tar -cv -f filename.tar filename...			打包
 	tar -t -f filename.tar					罗列出包的文件
