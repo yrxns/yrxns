@@ -155,3 +155,26 @@
 	ps aux			查看系统运行的所有进程
 	top			动态查看进程的变化
 	pstree			进程树
+
+
+2022年 04月 03日 星期日 14:54:01 CST
+	systemctl [command] [unit]
+	command:
+		start			启动服务
+		stop			关闭服务
+		restart			重启服务
+		reload			重载配置文件
+		enable			开机启动
+		disable			开机不启动
+		status			运行状态
+
+	active (running)		正在运行
+	active (exited)			仅执行一次就正常结束
+	active (waiting)		正在运行当中，不过需要其它事件去唤醒它
+	inactive			服务目前没有运行
+	
+	开机默认状态：
+	enable				开机运行
+	disable				开机不运行
+	static				不可以自己启动（不可 enable），不过可能会被其它的enable的服务唤醒
+	mask				无论如何都无法启动，因为已经被强制注销，可通过 systemctr unmask 方式改回默认状态
