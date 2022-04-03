@@ -177,4 +177,14 @@
 	enable				开机运行
 	disable				开机不运行
 	static				不可以自己启动（不可 enable），不过可能会被其它的enable的服务唤醒
-	mask				无论如何都无法启动，因为已经被强制注销，可通过 systemctr unmask 方式改回默认状态
+	mask				无论如何都无法启动，因为已经被强制注销，可通过 systemctl unmask 方式改回默认状态
+
+
+	systemctl [command] [--type=TYPE] [--all]			查看系统上的服务
+		command:
+			list-units（默认）			依据unit显示目前启动的unit，加上--all才会列出没启动的
+			list-unit-files				依据/usr/lib/systemd/system/ 内的文件，将所有文件列表说明
+		type:
+			service
+			socket
+			target
