@@ -188,3 +188,7 @@
 			service
 			socket
 			target
+
+
+	systemctl list-dependencies [unit] [--reverse]			分析各服务之间的依赖性
+		--reverse			反向追踪谁使用这个unit的意思
