@@ -16,3 +16,6 @@ vim -M file		禁止修改
 :3sp filename		三行高度的新窗口
 vim -o file...		水平分割窗口打开每个文件
 vim -O file...		垂直分割窗口打开每个文件
+
+:read {filename}	在光标下读入另一个文件
+:write >>{filename}	将内容写入另一个文件
