@@ -3,9 +3,11 @@
 	...
 	call plug#end()
 
-	:PlugStatus
-
-	:PlugInstall
+	
+|Command|Description|
+|---	|---	|
+|:PlugInstall|Install plugins|
+|:PlugStatus|Uninstall plugins|
 
 # [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 	call plug#begin()
@@ -18,14 +20,20 @@
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	call plug#end()
 
-	:CocInstall plugName
-	:CocUninstall plugName
+	
+	
+|Command|Description|
+|---	|---	|
+|:CocInstall plugName ... |Install extensions|
+|:CocUninstall plugName |Uninstall coc extension|
+
 **[coc-extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)**
 
 - [x] **[coc-markdown-preview](https://github.com/weirongxu/coc-markdown-preview-enhanced)**   
 ```
 	:CocInstall coc-webview
 	:CocInstall coc-markdown-preview-enhanced
-
-	:CocCommand markdown-preview-enhanced.openPreview
 ```
+|Command|Description|
+|---	|---	|
+|:CocCommand markdown-preview-enhanced.openPreview	|Open preview	|
