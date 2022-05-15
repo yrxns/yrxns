@@ -7,7 +7,7 @@
 |Command|Description|
 |---	|---	|
 |:PlugInstall|Install plugins|
-|:PlugStatus|Uninstall plugins|
+|:PlugStatus|plugins'status|
 
 # [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 	call plug#begin()
