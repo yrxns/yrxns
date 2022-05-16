@@ -7,6 +7,7 @@
 |Command|Description|
 |---	|---	|
 |:PlugInstall|Install plugins|
+|:PlugClean|Remove unlisted plugins|
 |:PlugStatus|plugins'status|
 
 # [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
