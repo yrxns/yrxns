@@ -55,9 +55,13 @@ map tu :tabe<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
 map tt :tabnext<CR>
-map mark :CocCommand markdown-preview-enhanced.openPreview<CR>
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+set foldmethod=indent
+set foldlevel=1
+:nnoremap <space> za
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+
+map mark :CocCommand markdown-preview-enhanced.openPreview<CR>
