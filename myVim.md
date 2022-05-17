@@ -1,3 +1,7 @@
+# figlet
+# ranger
+# vimium
+# Alacritty
 # [vim-plug](https://github.com/junegunn/vim-plug)
 	call plug#begin()
 	...
