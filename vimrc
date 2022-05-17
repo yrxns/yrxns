@@ -104,10 +104,14 @@ map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
 map ss <C-w>w
+noremap wk <C-w>t<C-w>K
+noremap wl <C-w>t<C-w>L
 map tu :tabe<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
 map tt :tabnext<CR>
+map tmn :-tabmove<CR>
+map tmp :+tabmove<CR>
 
 
 call plug#begin()
