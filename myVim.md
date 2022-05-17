@@ -42,3 +42,5 @@
 |Command|Description|
 |---    |---    |
 |:CocCommand markdown-preview-enhanced.openPreview      |Open preview   |
+
+- [x] **[coc-clangd](https://github.com/clangd/coc-clangd)**
