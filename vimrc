@@ -114,6 +114,9 @@ map tmn :-tabmove<CR>
 map tmp :+tabmove<CR>
 
 
+map sm :r !figlet
+
+
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
