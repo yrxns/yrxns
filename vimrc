@@ -115,6 +115,7 @@ map tmp :+tabmove<CR>
 
 
 map sm :r !figlet
+map <LEADER><CR> :set hlsearch!<CR>
 
 
 call plug#begin()
