@@ -44,3 +44,11 @@
 |:CocCommand markdown-preview-enhanced.openPreview      |Open preview   |
 
 - [x] **[coc-clangd](https://github.com/clangd/coc-clangd)**
+
+# [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)
+```
+Plug 'dhruvasagar/vim-table-mode'
+```
+
+
+
