@@ -120,6 +120,9 @@ map <LEADER><CR> :set hlsearch!<CR>
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
+"   markdown
 map mark :CocCommand markdown-preview-enhanced.openPreview<CR>
+map <LEADER>tm :TableModeToggle<CR>
