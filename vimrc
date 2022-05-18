@@ -123,6 +123,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
-"   markdown
-map mark :CocCommand markdown-preview-enhanced.openPreview<CR>
-map <LEADER>tm :TableModeToggle<CR>
+:source markdown.vim
