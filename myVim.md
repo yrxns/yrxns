@@ -2,7 +2,7 @@
 # ranger
 # vimium
 # Alacritty
-# [vim-plug](https://github.com/junegunn/vim-plug)
+# [vim-plug](https://github.com/junegunn/vim-plug)`curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh`
     call plug#begin()
     ...
     call plug#end()
