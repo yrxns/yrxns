@@ -50,5 +50,7 @@
 Plug 'dhruvasagar/vim-table-mode'
 ```
 
-
+| Command          | Description |
+|------------------|-------------|
+| :TableModeToggle | enable      |
 
