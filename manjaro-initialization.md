@@ -55,6 +55,9 @@ sudo pacman -Syyu
 
         yay -S baidunetdisk
 
+
+# code
+
 - VScode
 
         yay -S visual-studio-code-bin
