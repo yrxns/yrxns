@@ -84,7 +84,7 @@ set showmatch
 
 let mapleader=" "
 map R :source $MYVIMRC<CR>
-map <LEADER>rc :e ~/.vimrc<CR>
+nnoremap <LEADER>rc :e ~/.vimrc<CR>
 imap jj <Esc>
 map s <nop>
 map S :w<CR>
@@ -99,10 +99,10 @@ map <up> :res +5<CR>
 map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
-map <LEADER>h <C-w>h
-map <LEADER>j <C-w>j
-map <LEADER>k <C-w>k
-map <LEADER>l <C-w>l
+nnoremap <LEADER>h <C-w>h
+nnoremap <LEADER>j <C-w>j
+nnoremap <LEADER>k <C-w>k
+nnoremap <LEADER>l <C-w>l
 map ss <C-w>w
 noremap wk <C-w>t<C-w>K
 noremap wl <C-w>t<C-w>L
@@ -115,7 +115,7 @@ map tmp :+tabmove<CR>
 
 
 map sm :r !figlet
-map <LEADER><CR> :set hlsearch!<CR>
+nnoremap <LEADER><CR> :set hlsearch!<CR>
 
 
 call plug#begin()
