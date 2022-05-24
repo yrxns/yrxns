@@ -81,3 +81,11 @@ sudo pacman -Syyu
 
         sudo pacman -S ranger
         yay -S ranger
+
+- figlet
+
+       sudo pacman -S figlet
+
+- vimium
+
+        firefox
