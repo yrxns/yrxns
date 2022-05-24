@@ -123,4 +123,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
-:source markdown.vim
+:source ~/markdown.vim
