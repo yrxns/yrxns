@@ -30,9 +30,12 @@
 | x      | ✘，关闭当前网页                                             |
 | X      | 恢复网页                                                    |
 | r      | refresh，刷新当前网页                                       |
+| zb     | go to bilibili                                              |
+| zg     | go to github                                                |
+| sz     | 知乎搜索                                                    |
+| sb     | 哔哩哔哩搜索                                                |
+| sc     | CSDN搜索                                                    |
 | <++>   | <++>                                                        |
-| <++>   | <++>                                                        |
-
 
 # 自定义
 - Custom key mappings
@@ -45,3 +48,16 @@
         map $ lastTab
         map e Vomnibar.activateEditUrlInNewTab
         map E Vomnibar.activateEditUrl
+
+        map zb createTab https://www.bilibili.com/
+        map zg createTab https://github.com/
+
+        map sz Vomnibar.activateInNewTab keyword=zhihu
+        map sb Vomnibar.activateInNewTab keyword=bilibili
+        map sc Vomnibar.activateInNewTab keyword=csdn
+
+-  Custom search engines
+
+        zhihu: https://www.zhihu.com/search?type=content&q=%s
+        bilibili: https://search.bilibili.com/all?keyword=%s
+        csdn: https://so.csdn.net/so/search?q=%s
