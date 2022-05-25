@@ -119,8 +119,9 @@ nnoremap <LEADER><CR> :set hlsearch!<CR>
 
 
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dhruvasagar/vim-table-mode'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'dhruvasagar/vim-table-mode'
+    Plug 'preservim/nerdtree'
 call plug#end()
 
 :source ~/markdown.vim
@@ -140,3 +141,6 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" nerdtree
+nnoremap tree :NERDTreeToggle<CR>
