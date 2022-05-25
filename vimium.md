@@ -18,12 +18,12 @@
 | <<     | Move tab to the left                                        |
 | >>     | Move tab to the right                                       |
 | gs     | View page source                                            |
-| ge     | Edit the current URL                                        |
-| gE     | Edit the current URL and open in a new tab                  |
-| J      | Go one tab left                                             |
-| K      | Go one tab right                                            |
-| g0     | Go to the first tab                                         |
-| g$     | Go to the last tab                                          |
+| E      | Edit the current URL                                        |
+| e      | Edit the current URL and open in a new tab                  |
+| [      | Go one tab left                                             |
+| ]      | Go one tab right                                            |
+| 0      | Go to the first tab                                         |
+| $      | Go to the last tab                                          |
 | t      | tab，创建新标签页                                           |
 | ⇧p     | Paste，读取剪贴板的内容，粘贴到搜索栏搜索，并在新标签页打开 |
 | p      | 当前页打开                                                  |
