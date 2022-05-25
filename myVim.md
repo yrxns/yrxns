@@ -56,3 +56,6 @@ Plug 'dhruvasagar/vim-table-mode'
 |------------------|-------------|
 | :TableModeToggle | enable      |
 
+
+
+# [NERDTree](https://github.com/preservim/nerdtree)
