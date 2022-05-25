@@ -89,3 +89,4 @@ sudo pacman -Syyu
 - vimium
 
         firefox
+        [配置](https://github.com/yrxns/yrxns/blob/main/vimium.md)
