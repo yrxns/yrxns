@@ -1,4 +1,4 @@
-autocmd Filetype markdown map <LEADER>mark :TableModeToggle<CR>
+autocmd Filetype markdown nnoremap <LEADER>mark :TableModeToggle<CR>
 autocmd Filetype markdown map mark :CocCommand markdown-preview-enhanced.openPreview<CR>
 
 autocmd Filetype markdown inoremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
