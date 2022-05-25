@@ -13,8 +13,8 @@
 | u      | 向上移动半页                                                |
 | yy     | Copy the current URL to the clipboard                       |
 | gi     | Focus the first text input on the page                      |
-| H      | Go back in history                                          |
-| L      | Go forward in history                                       |
+| ,      | Go back in history                                          |
+| ;      | Go forward in history                                       |
 | <<     | Move tab to the left                                        |
 | >>     | Move tab to the right                                       |
 | gs     | View page source                                            |
@@ -32,3 +32,16 @@
 | r      | refresh，刷新当前网页                                       |
 | <++>   | <++>                                                        |
 | <++>   | <++>                                                        |
+
+
+# 自定义
+- Custom key mappings
+
+        map , goBack
+        map ; goForward
+        map [ previousTab
+        map ] nextTab
+        map 0 firstTab
+        map $ lastTab
+        map e Vomnibar.activateEditUrlInNewTab
+        map E Vomnibar.activateEditUrl
