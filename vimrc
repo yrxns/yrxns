@@ -120,7 +120,8 @@ inoremap " ""<++><Esc>4hi
 inoremap ( ()<++><Esc>4hi
 inoremap { {}<++><Esc>4hi
 inoremap [ []<++><Esc>4hi
-inoremap ;{ {
+inoremap < <><++><Esc>4hi
+inoremap ;{ {<CR>}<Esc>O
 
 map sm :r !figlet
 nnoremap <LEADER><CR> :set hlsearch!<CR>
