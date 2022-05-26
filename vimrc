@@ -114,6 +114,14 @@ map tmn :-tabmove<CR>
 map tmp :+tabmove<CR>
 
 
+autocmd Filetype markdown inoremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+inoremap ' ''<++><Esc>i
+inoremap " ""<Esc>i
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+inoremap ;{ {
+
 map sm :r !figlet
 nnoremap <LEADER><CR> :set hlsearch!<CR>
 
