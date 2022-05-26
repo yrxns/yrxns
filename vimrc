@@ -56,7 +56,7 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=1
 set foldlevelstart=99
-:nnoremap <LEADER> za
+nnoremap \ za
 
 
 " ===
@@ -114,12 +114,12 @@ map tmn :-tabmove<CR>
 map tmp :+tabmove<CR>
 
 
-autocmd Filetype markdown inoremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
-inoremap ' ''<++><Esc>i
-inoremap " ""<Esc>i
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
+inoremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+inoremap ' ''<++><Esc>4hi
+inoremap " ""<++><Esc>4hi
+inoremap ( ()<++><Esc>4hi
+inoremap { {}<++><Esc>4hi
+inoremap [ []<++><Esc>4hi
 inoremap ;{ {
 
 map sm :r !figlet
