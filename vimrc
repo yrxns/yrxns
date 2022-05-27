@@ -114,12 +114,12 @@ map tmn :-tabmove<CR>
 map tmp :+tabmove<CR>
 
 
-inoremap ' ''<++><Esc>4hi
-inoremap " ""<++><Esc>4hi
-inoremap ( ()<++><Esc>4hi
-inoremap { {}<++><Esc>4hi
-inoremap [ []<++><Esc>4hi
-inoremap ;{ {<CR>}<Esc>O
+"inoremap ' ''<++><Esc>4hi
+"inoremap " ""<++><Esc>4hi
+"inoremap ( ()<++><Esc>4hi
+"inoremap { {}<++><Esc>4hi
+"inoremap [ []<++><Esc>4hi
+"inoremap ;{ {<CR>}<Esc>O
 
 map sm :r !figlet
 nnoremap <LEADER><CR> :set hlsearch!<CR>
@@ -130,6 +130,7 @@ call plug#begin()
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'preservim/nerdtree'
     Plug 'mbbill/undotree'
+    Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 :source ~/markdown.vim
