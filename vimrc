@@ -131,6 +131,8 @@ call plug#begin()
     Plug 'preservim/nerdtree'
     Plug 'mbbill/undotree'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 :source ~/markdown.vim
