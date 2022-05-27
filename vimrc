@@ -114,7 +114,6 @@ map tmn :-tabmove<CR>
 map tmp :+tabmove<CR>
 
 
-inoremap <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 inoremap ' ''<++><Esc>4hi
 inoremap " ""<++><Esc>4hi
 inoremap ( ()<++><Esc>4hi
