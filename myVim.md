@@ -63,5 +63,3 @@ Plug 'dhruvasagar/vim-table-mode'
 # [Undotree](https://github.com/mbbill/undotree)
 
 # [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-
-# [vim-airline](https://github.com/vim-airline/vim-airline)
