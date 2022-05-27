@@ -59,3 +59,5 @@ Plug 'dhruvasagar/vim-table-mode'
 
 
 # [NERDTree](https://github.com/preservim/nerdtree)
+
+# [Undotree](https://github.com/mbbill/undotree)

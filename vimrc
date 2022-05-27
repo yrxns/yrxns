@@ -129,6 +129,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'preservim/nerdtree'
+    Plug 'mbbill/undotree'
 call plug#end()
 
 :source ~/markdown.vim
@@ -151,3 +152,6 @@ endfunction
 
 " nerdtree
 nnoremap tree :NERDTreeToggle<CR>
+
+" Undotree
+nnoremap ud :UndotreeToggle<CR>
