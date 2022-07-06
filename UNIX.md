@@ -289,3 +289,66 @@ fsync只对fd文件起作用，并且等待写磁盘操作结束才返回
 
     char *getcwd(char *buf, size_t size);
                                                                 成功，0；出错，-1
+
+
+# exit
+>正常终止一个程序
+
+    #include <stdlib.h>
+
+    void exit(int status);
+    void _Exit(int status);
+
+    ---------
+
+    #include <unistd.h>
+
+    void _exit(int status);
+
+
+# atexit
+>按照ISO C的规定，一个进程可以登记多至32个终止处理程序，它们将由exit自动调用
+
+    #include <stdlib.h>
+
+    int atexit(void (*func) (void));
+                                                                成功，0；出错，非0
+
+>exit 调用这些函数的顺序与它们登记时候的顺序相反。同一函数如若登记多次，也会被调用多次
+
+
+# 环境变量
+>name=value
+
+    #include <stdlib.h>
+
+    char *getenv(const char *name);
+                                                                若找到，返回与name关联的value的指针；若未找到，返回NULL
+
+    int putenv(char *str);
+                                                                成功，0；出错，非0
+
+    int setenv(const char *name, const char *value, int rewrite);
+    int unsetenv(const char *name);
+                                                                成功，0；出错，-1
+
+>putenv  取形式为name=value的字符串
+
+>setenv,如果环境中name已经存在，若rewrite非0，则首先删除其现有的定义，若rewrite为0，不做改变
+
+>unsetenv删除name的定义，即便不存在也不算出错
+
+
+# setjmp、longjmp
+>用于深层嵌套函数的跳转
+
+    #include <setjmp.h>
+
+    int setjmp(jmp_buf env);
+                                                                若直接调用，返回0；若从longjmp返回，longjmp的val
+
+    void longjmp(jmp_buf env, int val);
+
+>longjmp的val非0
+
+>如果你有一个自动变量，而又不想它回滚，则可将其定义为volatile。声明为全局变量或静态变量的值在执行longjmp时保持不变
