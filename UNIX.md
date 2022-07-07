@@ -406,3 +406,34 @@ fsync只对fd文件起作用，并且等待写磁盘操作结束才返回
 
 **小诀窍** 
 >如果fork一个子进程，但不要它等待子进程终止，也不希望子进程处于僵死状态直到父进程终止，实现这一要求的诀窍是调用fork两次
+
+
+
+# getpgrp
+>获取调用进程的进程组ID
+
+    #include <unistd.h>
+
+    pid_t getpgrp(void);
+                                                                返回调用进程的进程组ID
+
+
+
+# getpgid
+>获取指定进程的进程组ID
+
+    #include <unistd.h>
+
+    pid_t getpgid(pid_t pid);
+                                                                若成功，返回进程组ID；若出错，-1
+>若pid==0，返回调用进程的进程组ID，故 getpgid(0)等价于getpgrp()
+
+
+
+# setpgid
+>加入或创建一个进程组
+
+    #include <unistd.h>
+
+    int setpgid(pid_t pid, pid_t pgid);
+                                                                成功，0；出错，-1
