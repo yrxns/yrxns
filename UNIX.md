@@ -354,6 +354,19 @@ fsync只对fd文件起作用，并且等待写磁盘操作结束才返回
 >如果你有一个自动变量，而又不想它回滚，则可将其定义为volatile。声明为全局变量或静态变量的值在执行longjmp时保持不变
 
 
+
+# ...
+| 函数                | 作用                     |
+|---------------------|--------------------------|
+| pid_t getpid(void)  | 获取调用进程的进程ID     |
+| pid_t getppid(void) | 获取调用进程的父进程ID   |
+| uid_t getuid(void)  | 获取调用进程的实际用户ID |
+| uid_t geteuid(void) | 获取调用进程的有效用户ID |
+| gid_t getgid(void)  | 获取调用进程的实际组ID   |
+| gid_t getegid(void) | 获取调用进程的有效组ID   |
+
+
+
 # fork
 
     #include <unistd.h>
